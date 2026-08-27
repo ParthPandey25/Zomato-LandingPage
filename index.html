@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Zomato Clone — Discover the Best Food & Drinks in Nagpur</title>
+    <meta name="description" content="Find the best restaurants, cafes, and bars in Nagpur. Order online, explore dining options, and discover nightlife with our Zomato-inspired food discovery platform." />
+    <meta name="keywords" content="Zomato, food delivery, restaurants, Nagpur, dining, order food online" />
+    <meta name="author" content="Rohan" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Zomato_logo.png/220px-Zomato_logo.png" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ============================================================
+         1. NAVIGATION BAR
+         ============================================================ -->
+    <nav class="navbar" id="navbar">
+      <a href="#" class="nav__app-link">
+        <i class="fa-solid fa-mobile-screen-button"></i>&nbsp; Get the App
+      </a>
+
+      <div class="nav__menu" id="navMenu">
+        <a href="#" class="nav__link">Investor Relations</a>
+        <a href="#" class="nav__link">Add Restaurant</a>
+        <a href="#" class="nav__login-btn">Log in</a>
+        <a href="#" class="nav__signup-btn">Sign up</a>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+
+    <!-- Mobile Slide-in Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">Investor Relations</a>
+      <a href="#">Add Restaurant</a>
+      <a href="#">Log in</a>
+      <a href="#" class="nav__signup-btn">Sign up</a>
+    </div>
+
+    <!-- ============================================================
+         2. HERO SECTION
+         ============================================================ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+
+      <!-- Floating Particles (generated via JS) -->
+      <div class="hero__particles" id="heroParticles"></div>
+
+      <div class="hero__content">
+        <img
+          src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/heroSectionLogo.png"
+          alt="Zomato Logo"
+          class="hero__logo"
+        />
+        <h1 class="hero__title">
+          Discover the best food & drinks in
+          <em>Nagpur</em>
+          <span>Restaurants, cafes, and bars — all in one place</span>
+        </h1>
+
+        <!-- Search Bar -->
+        <div class="hero__search" id="heroSearch">
+          <div class="search__location">
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <input
+              type="text"
+              class="search__location-input"
+              placeholder="Nagpur"
+              id="locationInput"
+            />
+          </div>
+          <div class="search__query">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              class="search__query-input"
+              placeholder="Search for restaurant, cuisine or a dish"
+              id="searchInput"
+            />
+          </div>
+        </div>
+
+        <!-- Popular Searches -->
+        <div class="hero__popular">
+          <span class="hero__popular-label">Popular:</span>
+          <span class="hero__popular-tag">Biryani</span>
+          <span class="hero__popular-tag">Pizza</span>
+          <span class="hero__popular-tag">Saoji</span>
+          <span class="hero__popular-tag">Tarri Poha</span>
+          <span class="hero__popular-tag">Burger</span>
+          <span class="hero__popular-tag">Chinese</span>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="hero__scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. SERVICE CARDS — What Zomato Offers
+         ============================================================ -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="services__grid">
+          <!-- Card 1: Order Online -->
+          <div class="service-card reveal">
+            <img
+              src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/item1.png"
+              alt="Order Online"
+              class="service-card__image"
+            />
+            <div class="service-card__overlay">
+              <h3 class="service-card__title">Order Online</h3>
+              <p class="service-card__desc">Stay home and order to your doorstep</p>
+            </div>
+            <span class="service-card__badge">FAST DELIVERY</span>
+          </div>
+
+          <!-- Card 2: Dining Out -->
+          <div class="service-card reveal reveal-delay-1">
+            <img
+              src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/item2.png"
+              alt="Dining Out"
+              class="service-card__image"
+            />
+            <div class="service-card__overlay">
+              <h3 class="service-card__title">Dining Out</h3>
+              <p class="service-card__desc">View the city's favourite dining venues</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Nightlife & Clubs -->
+          <div class="service-card reveal reveal-delay-2">
+            <img
+              src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/item3.png"
+              alt="Nightlife & Clubs"
+              class="service-card__image"
+            />
+            <div class="service-card__overlay">
+              <h3 class="service-card__title">Nightlife & Clubs</h3>
+              <p class="service-card__desc">Explore the city's top nightlife outlets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. COLLECTIONS
+         ============================================================ -->
+    <section class="collections" id="collections">
+      <div class="container">
+        <div class="collections__header reveal">
+          <div>
+            <h2 class="section-title">Collections</h2>
+            <p class="section-subtitle">Explore curated lists of top restaurants, cafes, pubs, and bars in Nagpur, based on trends</p>
+          </div>
+          <a href="#" class="collections__see-all">
+            All collections in Nagpur <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="collections__grid">
+          <div class="collection-card reveal">
+            <img
+              src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/collection1.jpg"
+              alt="Best Insta-worthy Places"
+              class="collection-card__image"
+            />
+            <div class="collection-card__overlay">
+              <h3 class="collection-card__title">Best Insta-worthy Places</h3>
+              <span class="collection-card__count">
+                18 Places <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="collection-card reveal reveal-delay-1">
+            <img
+              src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/collection2.jpg"
+              alt="Great Buffet Places"
+              class="collection-card__image"
+            />
+            <div class="collection-card__overlay">
+              <h3 class="collection-card__title">Great Buffet Places</h3>
+              <span class="collection-card__count">
+                24 Places <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="collection-card reveal reveal-delay-2">
+            <img
+              src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/collection3.jpg"
+              alt="Best Rooftop Places"
+              class="collection-card__image"
+            />
+            <div class="collection-card__overlay">
+              <h3 class="collection-card__title">Best Rooftop Places</h3>
+              <span class="collection-card__count">
+                12 Places <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="collection-card reveal reveal-delay-3">
+            <img
+              src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/collection4.jpg"
+              alt="Newly Opened Places"
+              class="collection-card__image"
+            />
+            <div class="collection-card__overlay">
+              <h3 class="collection-card__title">Newly Opened Places</h3>
+              <span class="collection-card__count">
+                32 Places <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. POPULAR LOCALITIES
+         ============================================================ -->
+    <section class="localities" id="localities">
+      <div class="container">
+        <h2 class="section-title reveal">Popular localities in and around <strong>Nagpur</strong></h2>
+        <p class="section-subtitle reveal">Explore the best food destinations near you</p>
+
+        <div class="localities__grid">
+          <div class="locality-card reveal">
+            <div>
+              <div class="locality-card__name">Dharampeth</div>
+              <div class="locality-card__count">287 restaurants</div>
+            </div>
+            <i class="fa-solid fa-chevron-right locality-card__arrow"></i>
+          </div>
+
+          <div class="locality-card reveal reveal-delay-1">
+            <div>
+              <div class="locality-card__name">Sadar</div>
+              <div class="locality-card__count">314 restaurants</div>
+            </div>
+            <i class="fa-solid fa-chevron-right locality-card__arrow"></i>
+          </div>
+
+          <div class="locality-card reveal reveal-delay-2">
+            <div>
+              <div class="locality-card__name">Sitabuldi</div>
+              <div class="locality-card__count">198 restaurants</div>
+            </div>
+            <i class="fa-solid fa-chevron-right locality-card__arrow"></i>
+          </div>
+
+          <div class="locality-card reveal">
+            <div>
+              <div class="locality-card__name">Ramdaspeth</div>
+              <div class="locality-card__count">176 restaurants</div>
+            </div>
+            <i class="fa-solid fa-chevron-right locality-card__arrow"></i>
+          </div>
+
+          <div class="locality-card reveal reveal-delay-1">
+            <div>
+              <div class="locality-card__name">Wardhaman Nagar</div>
+              <div class="locality-card__count">145 restaurants</div>
+            </div>
+            <i class="fa-solid fa-chevron-right locality-card__arrow"></i>
+          </div>
+
+          <div class="locality-card reveal reveal-delay-2">
+            <div>
+              <div class="locality-card__name">Civil Lines</div>
+              <div class="locality-card__count">232 restaurants</div>
+            </div>
+            <i class="fa-solid fa-chevron-right locality-card__arrow"></i>
+          </div>
+
+          <div class="locality-card reveal">
+            <div>
+              <div class="locality-card__name">Manish Nagar</div>
+              <div class="locality-card__count">120 restaurants</div>
+            </div>
+            <i class="fa-solid fa-chevron-right locality-card__arrow"></i>
+          </div>
+
+          <div class="locality-card reveal reveal-delay-1">
+            <div>
+              <div class="locality-card__name">Bajaj Nagar</div>
+              <div class="locality-card__count">165 restaurants</div>
+            </div>
+            <i class="fa-solid fa-chevron-right locality-card__arrow"></i>
+          </div>
+
+          <div class="localities__see-all reveal reveal-delay-2">
+            see more <i class="fa-solid fa-chevron-down" style="margin-left: 8px;"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. APP DOWNLOAD BANNER
+         ============================================================ -->
+    <section class="app-banner" id="appBanner">
+      <div class="container">
+        <div class="app-banner__inner reveal">
+          <div class="app-banner__image">
+            <img
+              src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/mobileBanner.png"
+              alt="Zomato App on Mobile"
+              class="app-banner__phone"
+            />
+          </div>
+          <div class="app-banner__content">
+            <h2 class="app-banner__title">Get the Zomato App</h2>
+            <p class="app-banner__subtitle">
+              We will send you a link, open it on your phone to download the app.
+              Enjoy exclusive offers, live order tracking, and a seamless food ordering experience.
+            </p>
+            <div class="app-banner__badges">
+              <a href="#">
+                <img
+                  src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/playStore.png"
+                  alt="Get it on Google Play"
+                  class="app-badge"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/appleStore.png"
+                  alt="Download on App Store"
+                  class="app-badge"
+                />
+              </a>
+            </div>
+
+            <div class="app-banner__stats">
+              <div class="app-stat">
+                <div class="app-stat__number" data-count="15000">0</div>
+                <div class="app-stat__label">Partner Restaurants</div>
+              </div>
+              <div class="app-stat">
+                <div class="app-stat__number" data-count="800">0</div>
+                <div class="app-stat__label">Cities</div>
+              </div>
+              <div class="app-stat">
+                <div class="app-stat__number" data-count="5000000">0</div>
+                <div class="app-stat__label">Happy Deliveries</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. EXPLORE OPTIONS NEAR ME
+         ============================================================ -->
+    <section class="explore" id="explore">
+      <div class="container">
+        <h2 class="section-title reveal">Explore options near me</h2>
+        <p class="section-subtitle reveal">Discover popular cuisines and restaurant types around Nagpur</p>
+
+        <div class="explore__accordion reveal">
+          <!-- Accordion: Popular Cuisines -->
+          <div class="accordion-item" id="accordion-cuisines">
+            <div class="accordion__header" onclick="toggleAccordion('accordion-cuisines')">
+              <span class="accordion__title">Popular Cuisines Near Me</span>
+              <span class="accordion__icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__content">
+                <span class="accordion__tag">Saoji Food Near Me</span>
+                <span class="accordion__tag">Biryani Near Me</span>
+                <span class="accordion__tag">Chinese Near Me</span>
+                <span class="accordion__tag">South Indian Near Me</span>
+                <span class="accordion__tag">Pizza Near Me</span>
+                <span class="accordion__tag">Burger Near Me</span>
+                <span class="accordion__tag">North Indian Near Me</span>
+                <span class="accordion__tag">Mughlai Near Me</span>
+                <span class="accordion__tag">Italian Near Me</span>
+                <span class="accordion__tag">Rolls Near Me</span>
+                <span class="accordion__tag">Street Food Near Me</span>
+                <span class="accordion__tag">Desserts Near Me</span>
+                <span class="accordion__tag">Cafe Near Me</span>
+                <span class="accordion__tag">Tarri Poha Near Me</span>
+                <span class="accordion__tag">Sandwich Near Me</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion: Popular Restaurant Types -->
+          <div class="accordion-item" id="accordion-types">
+            <div class="accordion__header" onclick="toggleAccordion('accordion-types')">
+              <span class="accordion__title">Popular Restaurant Types Near Me</span>
+              <span class="accordion__icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__content">
+                <span class="accordion__tag">Dine Out Restaurants</span>
+                <span class="accordion__tag">Cafes</span>
+                <span class="accordion__tag">Fast Food</span>
+                <span class="accordion__tag">Sweet Shops</span>
+                <span class="accordion__tag">Bakeries</span>
+                <span class="accordion__tag">Casual Dining</span>
+                <span class="accordion__tag">Fine Dining</span>
+                <span class="accordion__tag">Food Courts</span>
+                <span class="accordion__tag">Bars & Pubs</span>
+                <span class="accordion__tag">Lounges</span>
+                <span class="accordion__tag">Dhaba</span>
+                <span class="accordion__tag">Quick Bites</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion: Top Restaurant Chains -->
+          <div class="accordion-item" id="accordion-chains">
+            <div class="accordion__header" onclick="toggleAccordion('accordion-chains')">
+              <span class="accordion__title">Top Restaurant Chains</span>
+              <span class="accordion__icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__content">
+                <span class="accordion__tag">Domino's</span>
+                <span class="accordion__tag">McDonald's</span>
+                <span class="accordion__tag">Subway</span>
+                <span class="accordion__tag">KFC</span>
+                <span class="accordion__tag">Pizza Hut</span>
+                <span class="accordion__tag">Haldiram's</span>
+                <span class="accordion__tag">Barbeque Nation</span>
+                <span class="accordion__tag">Starbucks</span>
+                <span class="accordion__tag">Burger King</span>
+                <span class="accordion__tag">Wow! Momo</span>
+                <span class="accordion__tag">Behrouz Biryani</span>
+                <span class="accordion__tag">Faasos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion: Cities -->
+          <div class="accordion-item" id="accordion-cities">
+            <div class="accordion__header" onclick="toggleAccordion('accordion-cities')">
+              <span class="accordion__title">Cities We Deliver To</span>
+              <span class="accordion__icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="accordion__body">
+              <div class="accordion__content">
+                <span class="accordion__tag">Mumbai</span>
+                <span class="accordion__tag">Delhi</span>
+                <span class="accordion__tag">Bangalore</span>
+                <span class="accordion__tag">Hyderabad</span>
+                <span class="accordion__tag">Pune</span>
+                <span class="accordion__tag">Kolkata</span>
+                <span class="accordion__tag">Chennai</span>
+                <span class="accordion__tag">Ahmedabad</span>
+                <span class="accordion__tag">Nagpur</span>
+                <span class="accordion__tag">Lucknow</span>
+                <span class="accordion__tag">Jaipur</span>
+                <span class="accordion__tag">Chandigarh</span>
+                <span class="accordion__tag">Goa</span>
+                <span class="accordion__tag">Indore</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         8. FOOTER
+         ============================================================ -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__top">
+          <!-- Brand Column -->
+          <div class="footer__brand">
+            <img
+              src="https://raw.githubusercontent.com/rohan1917/10123-J-20123-Zomato-Landing-Page/master/images/logo.png"
+              alt="Zomato"
+              class="footer__logo"
+            />
+            <p class="footer__tagline">
+              Better food for more people. Discover the best restaurants,
+              cafes, and bars in your city.
+            </p>
+            <div class="footer__social">
+              <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="footer__social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="footer__social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- About Column -->
+          <div class="footer__column">
+            <h4 class="footer__column-title">About Zomato</h4>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Who We Are</a></li>
+              <li><a href="#" class="footer__link">Blog</a></li>
+              <li><a href="#" class="footer__link">Work With Us</a></li>
+              <li><a href="#" class="footer__link">Investor Relations</a></li>
+              <li><a href="#" class="footer__link">Report Fraud</a></li>
+              <li><a href="#" class="footer__link">Press Kit</a></li>
+            </ul>
+          </div>
+
+          <!-- Zomaverse Column -->
+          <div class="footer__column">
+            <h4 class="footer__column-title">Zomaverse</h4>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Zomato</a></li>
+              <li><a href="#" class="footer__link">Blinkit</a></li>
+              <li><a href="#" class="footer__link">Feeding India</a></li>
+              <li><a href="#" class="footer__link">Hyperpure</a></li>
+              <li><a href="#" class="footer__link">Zomato Live</a></li>
+              <li><a href="#" class="footer__link">Weather Union</a></li>
+            </ul>
+          </div>
+
+          <!-- For Restaurants Column -->
+          <div class="footer__column">
+            <h4 class="footer__column-title">For Restaurants</h4>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Partner With Us</a></li>
+              <li><a href="#" class="footer__link">Apps For You</a></li>
+              <li><a href="#" class="footer__link">Advertise</a></li>
+            </ul>
+          </div>
+
+          <!-- Learn More Column -->
+          <div class="footer__column">
+            <h4 class="footer__column-title">Learn More</h4>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Privacy</a></li>
+              <li><a href="#" class="footer__link">Security</a></li>
+              <li><a href="#" class="footer__link">Terms</a></li>
+              <li><a href="#" class="footer__link">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies.
+            All trademarks are properties of their respective owners. &copy; 2024 Zomato™ Ltd. All rights reserved.
+          </p>
+          <div class="footer__country">
+            <span class="footer__country-flag">🇮🇳</span>
+            India
+            <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
