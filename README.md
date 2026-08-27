@@ -108,4 +108,4 @@ This project is for **educational purposes only** and is not affiliated with Zom
 
 ---
 
-Made with ❤️ by Rohan
+Made with ❤️ by Parth Pandey
